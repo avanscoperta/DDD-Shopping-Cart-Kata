@@ -50,8 +50,11 @@ public class ShoppingCartTest {
         ArticleId articleId = ArticleId.generate();
         String itemDescription = "bellissimo oggetto";
         int qty = 4;
+        double unitPrice = 0.99;
 
-        shoppingCart.addItem(articleId, itemDescription, qty);
+        AddItems addItems = new AddItems(cartId, articleId, itemDescription, qty, unitPrice);
+
+        shoppingCart.addItem(addItems);
 
         assertEquals(qty, shoppingCart.getItemsCount());
     }
