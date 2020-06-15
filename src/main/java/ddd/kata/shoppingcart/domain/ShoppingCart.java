@@ -1,5 +1,6 @@
 package ddd.kata.shoppingcart.domain;
 
+import ddd.kata.shoppingcart.domain.articles.ArticleId;
 import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
@@ -24,6 +25,17 @@ public class ShoppingCart {
     }
 
     public int getItemsCount() {
-        return lineItems.size();
+        int count = 0;
+        for (LineItem lineItem:lineItems)
+              {
+                  count = count + lineItem.getQty();
+
+        }
+        return count;
+    }
+
+    public void addItem(ArticleId articleId, String itemDescription, int qty) {
+        LineItem lineItem = new LineItem(articleId, itemDescription, qty);
+        lineItems.add(lineItem);
     }
 }

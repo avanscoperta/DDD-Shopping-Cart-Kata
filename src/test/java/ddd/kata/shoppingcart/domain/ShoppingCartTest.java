@@ -1,5 +1,6 @@
 package ddd.kata.shoppingcart.domain;
 
+import ddd.kata.shoppingcart.domain.articles.ArticleId;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
@@ -37,6 +38,22 @@ public class ShoppingCartTest {
         ShoppingCart shoppingCart = new ShoppingCart(cartId, userId);
 
         assertEquals(0, shoppingCart.getItemsCount());
+    }
+
+    @Test
+    public void canAddItems() {
+        String cartId = UUID.randomUUID().toString();
+        String userId = UUID.randomUUID().toString();
+
+        ShoppingCart shoppingCart = new ShoppingCart(cartId, userId);
+
+        ArticleId articleId = ArticleId.generate();
+        String itemDescription = "bellissimo oggetto";
+        int qty = 4;
+
+        shoppingCart.addItem(articleId, itemDescription, qty);
+
+        assertEquals(qty, shoppingCart.getItemsCount());
     }
 
 
