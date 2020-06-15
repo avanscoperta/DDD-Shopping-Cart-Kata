@@ -14,14 +14,14 @@ public class ShoppingCartApi {
 ShoppingCartRepository repository;
 
 
-    public ShoppingCart getCartForUser(String userId) {
+ /*   public ShoppingCart getCartForUser(String userId) {
         ShoppingCart shoppingCart = repository.findByUserId(userId);
         if(shoppingCart == null) {
             shoppingCart = ShoppingCart.createEmpty(userId);
             repository.save(shoppingCart);
         }
         return  shoppingCart;
-    }
+    }*/
 
 
 

@@ -21,13 +21,28 @@ public class ShoppingCartTest {
 
     @Test
     public void anEmptyCartSubTotalIsZero() {
+        String cartId = UUID.randomUUID().toString();
         String userId = UUID.randomUUID().toString();
 
-        ShoppingCart shoppingCart = ShoppingCart.createEmpty(userId);
+        ShoppingCart shoppingCart = new ShoppingCart(cartId, userId);
 
         assertEquals(0.0, shoppingCart.getTotalAmount());
     }
 
+    @Test
+    public void thereAreNoItems() {
+        String cartId = UUID.randomUUID().toString();
+        String userId = UUID.randomUUID().toString();
+
+        ShoppingCart shoppingCart = new ShoppingCart(cartId, userId);
+
+        assertEquals(0, shoppingCart.getItemsCount());
+    }
+
+
+
+
+    /*
     @Test
     public void canAddItemsToCart() {
         String userId = UUID.randomUUID().toString();
@@ -40,6 +55,8 @@ public class ShoppingCartTest {
         shoppingCart.addItem(itemId, description, unitPrice);
 
         assertEquals(1, shoppingCart.getItemsCount());
-    }
+    }*/
+
+
 
 }
