@@ -34,10 +34,6 @@ public class ShoppingCart {
         return count;
     }
 
-    public void addItem(ArticleId articleId, String itemDescription, int qty) {
-
-    }
-
     public void addItem(AddItems command) {
         LineItem lineItem = new LineItem(command.getArticleId(), command.getItemDescription(), command.getQty());
         lineItems.add(lineItem);
