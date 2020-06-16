@@ -1,10 +1,7 @@
-package ddd.kata.shoppingcart.application;
+package ddd.bluebook.kata.shoppingcart.application;
 
-import ddd.kata.shoppingcart.domain.ShoppingCart;
-import ddd.kata.shoppingcart.domain.ShoppingCartRepository;
+import ddd.bluebook.kata.shoppingcart.domain.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Component;
 
 @Component

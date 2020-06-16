@@ -1,4 +1,4 @@
-package ddd.kata.shoppingcart;
+package ddd.bluebook.kata.shoppingcart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

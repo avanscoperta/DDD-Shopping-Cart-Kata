@@ -1,6 +1,6 @@
-package ddd.kata.shoppingcart.domain;
+package ddd.bluebook.kata.shoppingcart.domain;
 
-import ddd.kata.shoppingcart.domain.articles.ArticleId;
+import ddd.bluebook.kata.shoppingcart.domain.articles.ArticleId;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;

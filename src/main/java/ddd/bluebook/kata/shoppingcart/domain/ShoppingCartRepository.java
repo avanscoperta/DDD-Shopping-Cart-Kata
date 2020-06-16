@@ -1,4 +1,4 @@
-package ddd.kata.shoppingcart.domain;
+package ddd.bluebook.kata.shoppingcart.domain;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Component;

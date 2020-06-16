@@ -1,4 +1,4 @@
-package ddd.kata.shoppingcart.domain.articles;
+package ddd.bluebook.kata.shoppingcart.domain.articles;
 
 import java.util.UUID;
 

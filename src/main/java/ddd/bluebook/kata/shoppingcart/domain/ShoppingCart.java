@@ -1,14 +1,9 @@
-package ddd.kata.shoppingcart.domain;
-
-import ddd.kata.shoppingcart.domain.articles.ArticleId;
-import org.springframework.data.annotation.Id;
+package ddd.bluebook.kata.shoppingcart.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class ShoppingCart {
-
 
     private final String cartId;
     private final String userId;

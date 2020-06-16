@@ -1,4 +1,4 @@
-package ddd.kata.shoppingcart;
+package ddd.bluebook.kata.shoppingcart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
