@@ -1,14 +1,11 @@
-package ddd.es.kata.shoppingcart.domain.command;
+package ddd.es.kata.shoppingcart.domain;
 
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
-
-public class CreateEmpty {
-
-    @TargetAggregateIdentifier
+public class CartCreated {
     private final String cartId;
     private final String userId;
 
-    public CreateEmpty(String cartId, String userId) {
+    public CartCreated(String cartId, String userId) {
+
         this.cartId = cartId;
         this.userId = userId;
     }

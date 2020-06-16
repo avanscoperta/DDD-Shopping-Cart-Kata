@@ -1,7 +1,6 @@
 package ddd.es.kata.shoppingcart.domain;
 
-import ddd.es.kata.shoppingcart.domain.command.CreateEmpty;
-import ddd.es.kata.shoppingcart.domain.events.CartCreated;
+
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
