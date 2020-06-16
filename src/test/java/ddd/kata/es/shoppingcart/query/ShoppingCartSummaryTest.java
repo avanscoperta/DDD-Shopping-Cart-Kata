@@ -30,4 +30,6 @@ public class ShoppingCartSummaryTest {
 
         assertTrue(cartSummary.isPresent());
     }
+
+
 }
