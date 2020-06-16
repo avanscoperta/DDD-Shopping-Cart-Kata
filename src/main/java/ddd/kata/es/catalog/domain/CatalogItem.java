@@ -26,6 +26,16 @@ public class CatalogItem {
         ));
     }
 
+    @CommandHandler
+    public void updateItemPrice(UpdateItemPrice command) {
+        /* TODO: this is where information from the previous state could have made
+         * the event more information rich.
+         */
+        apply(new ItemPriceUpdated(
+                command.getItemId(), command.getNewPrice()
+        ));
+    }
+
     @EventSourcingHandler
     public void on(ItemAddedToCatalog event) {
         this.itemId = event.getItemId();
