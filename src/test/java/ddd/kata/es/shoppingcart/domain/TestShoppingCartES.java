@@ -19,7 +19,7 @@ import java.util.UUID;
 public class TestShoppingCartES {
 
     FixtureConfiguration<ShoppingCart> fixture = new AggregateTestFixture<>(ShoppingCart.class);
-    private String cartId;
+    private CartId cartId;
     private String userId;
     private CreateEmpty createEmpty;
     private CartCreated cartCreatedEmpty;
@@ -33,7 +33,7 @@ public class TestShoppingCartES {
 
     @BeforeEach
     void setUp() {
-        cartId = UUID.randomUUID().toString();
+        cartId = CartId.generate();
         userId = UUID.randomUUID().toString();
         createEmpty = new CreateEmpty(cartId, userId);
         cartCreatedEmpty = new CartCreated(cartId, userId);

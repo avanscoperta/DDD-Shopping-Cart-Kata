@@ -24,7 +24,7 @@ public class CartSummaryProjection {
      */
     public void on(CartCreated cartCreated) {
         CartSummaryView summaryView = new CartSummaryView(
-                cartCreated.getCartId(),
+                cartCreated.getCartId().toString(),    // <-- Should we keep the original type or flatten it?
                 cartCreated.getUserId()
         );
         repository.save(summaryView);

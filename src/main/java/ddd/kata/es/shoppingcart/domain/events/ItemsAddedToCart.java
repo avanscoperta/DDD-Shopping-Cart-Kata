@@ -1,16 +1,17 @@
 package ddd.kata.es.shoppingcart.domain.events;
 
 import ddd.kata.es.catalog.domain.ItemId;
+import ddd.kata.es.shoppingcart.domain.CartId;
 import org.javamoney.moneta.Money;
 
 public class ItemsAddedToCart {
-    private final String cartId;
+    private CartId cartId;
     private final ItemId itemId;
     private final String description;
     private final int qty;
     private final Money unitPrice;
 
-    public ItemsAddedToCart(String cartId, ItemId itemId, String description, int qty, Money unitPrice) {
+    public ItemsAddedToCart(CartId cartId, ItemId itemId, String description, int qty, Money unitPrice) {
 
         this.cartId = cartId;
         this.itemId = itemId;
@@ -19,7 +20,7 @@ public class ItemsAddedToCart {
         this.unitPrice = unitPrice;
     }
 
-    public String getCartId() {
+    public CartId getCartId() {
         return cartId;
     }
 

@@ -21,7 +21,7 @@ import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 public class ShoppingCart {
 
     @AggregateIdentifier
-    private String cartId;
+    private CartId cartId;
 
     private List<LineItem> lineItems;
 
