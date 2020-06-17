@@ -1,6 +1,7 @@
 package ddd.kata.es.shoppingcart.query;
 
 import ddd.kata.es.shoppingcart.domain.events.CartCreated;
+import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +23,7 @@ public class CartSummaryProjection {
      * Seeds the summary with the content of the first event.
      * @param cartCreated
      */
+    @EventHandler
     public void on(CartCreated cartCreated) {
         CartSummaryView summaryView = new CartSummaryView(
                 cartCreated.getCartId().toString(),    // <-- Should we keep the original type or flatten it?
